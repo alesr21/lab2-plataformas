@@ -1,0 +1,15 @@
+[Unit]
+Description=Servicio de Monitoreo de Cambios en Directorios
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /home/alesol/lab2/servicios/ejercicio4.sh
+WorkingDirectory=/home/alesol/lab2/servicios
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+
+
